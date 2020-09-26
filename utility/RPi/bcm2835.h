@@ -689,7 +689,7 @@
 /*! Physical address and size of the peripherals block
   May be overridden on RPi2
 */
-extern off_t bcm2835_peripherals_base;
+extern off64_t bcm2835_peripherals_base;
 /*! Size of the peripherals block to be mapped */
 extern size_t bcm2835_peripherals_size;
 
