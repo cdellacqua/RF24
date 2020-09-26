@@ -36,7 +36,7 @@
 /* Physical address and size of the peripherals block
 // May be overridden on RPi2
 */
-off_t bcm2835_peripherals_base = BCM2835_PERI_BASE;
+off64_t bcm2835_peripherals_base = BCM2835_PERI_BASE;
 size_t bcm2835_peripherals_size = BCM2835_PERI_SIZE;
 
 /* Virtual memory address of the mapped peripherals block 
@@ -1761,7 +1761,7 @@ void *malloc_aligned(size_t size)
 // Return mapped address on success, MAP_FAILED otherwise.
 // On error print message.
 */
-static void *mapmem(const char *msg, size_t size, int fd, off_t off)
+static void *mapmem(const char *msg, size_t size, int fd, off64_t off)
 {
     void *map = mmap(NULL, size, (PROT_READ | PROT_WRITE), MAP_SHARED, fd, off);
     if (map == MAP_FAILED)
