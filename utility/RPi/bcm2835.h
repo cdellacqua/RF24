@@ -603,6 +603,7 @@
 #ifndef BCM2835_H
 #define BCM2835_H
 
+#include <sys/types.h>
 #include <stdint.h>
 
 #define BCM2835_VERSION 10066 /* Version 1.66 */
@@ -689,7 +690,7 @@
 /*! Physical address and size of the peripherals block
   May be overridden on RPi2
 */
-extern off64_t bcm2835_peripherals_base;
+extern off_t bcm2835_peripherals_base;
 /*! Size of the peripherals block to be mapped */
 extern size_t bcm2835_peripherals_size;
 
